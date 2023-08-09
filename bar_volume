@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+#volume
+if [[ `pactl list sinks | grep Mute | grep y` ]];
+then
+    printf " $(awk -F\"[][]\" '/Left:/ { print $2 }' <(amixer sget Master))";
+else
+    printf " $(awk -F\"[][]\" '/Left:/ { print $2 }' <(amixer sget Master))";
+fi
