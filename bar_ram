@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+#ram
+printf " $(free -h | grep Mem | awk '{ print $3}' | sed 's/i//g')"
